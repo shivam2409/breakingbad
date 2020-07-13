@@ -1,4 +1,5 @@
 import React from 'react';
+import CharecterItem from './CharecterItem';
 
 const CharacterBox = ({ items, isLoading }) => {
   return isLoading ? (
@@ -6,7 +7,7 @@ const CharacterBox = ({ items, isLoading }) => {
   ) : (
     <section className='cards'>
       {items.map((item) => (
-        <h1>{item.name}</h1>
+        <CharecterItem key={item.char_id} item={item}></CharecterItem>
       ))}
     </section>
   );
